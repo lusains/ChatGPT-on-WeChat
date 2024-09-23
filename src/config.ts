@@ -15,6 +15,7 @@ if (fs.existsSync("./config.yaml")) {
 else {
   configFile = {
     openaiApiKey: process.env.OPENAI_API_KEY,
+    openaiBasePath: process.env.OPENAI_API_BASE_URL,
     openaiOrganizationID: process.env.OPENAI_ORGANIZATION_KEY,
     chatgptTriggerKeyword: process.env.CHATGPT_TRIGGER_KEYWORD,
   };
@@ -31,4 +32,5 @@ export const Config: IConfig = {
   openaiApiKey: configFile.openaiApiKey,
   openaiOrganizationID: configFile.openaiOrganizationID || "",
   chatgptTriggerKeyword: configFile.chatgptTriggerKeyword || "",
+  openaiBasePath: configFile.openaiBasePath || "https://api.openai.com/v1",
 };
