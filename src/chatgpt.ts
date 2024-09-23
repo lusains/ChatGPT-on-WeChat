@@ -80,6 +80,7 @@ export class ChatGPTBot {
       this.openaiAccountConfig = new Configuration({
         organization: Config.openaiOrganizationID,
         apiKey: Config.openaiApiKey,
+        basePath: Config.openaiBasePath,
       });
       // OpenAI API instance
       this.openaiApiInstance = new OpenAIApi(this.openaiAccountConfig);
